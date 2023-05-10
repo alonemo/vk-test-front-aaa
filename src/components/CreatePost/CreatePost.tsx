@@ -31,7 +31,7 @@ const CreatePost = () => {
       const file = event.target.files[0];
       formData.append('image', file);
       const { data } = await instance.post('/upload', formData);
-      setImg(`http://localhost:4444${data.url}`);
+      setImg(`https://lucent-licorice-1f7a27.netlify.app${data.url}`);
     } catch (err: any) {
       setImg('');
       alert(await err.response.data.message);

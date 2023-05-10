@@ -10,7 +10,7 @@ import {
 import { getTokenHelper, getUserIdHelper } from './helper';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:4444',
+  baseURL: process.env.REACT_APP_URL,
 });
 
 export const login = async (logData: ILogData) => {

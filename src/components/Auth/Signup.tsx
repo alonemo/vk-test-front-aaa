@@ -29,7 +29,7 @@ const Signup = () => {
       const file = event.target.files[0];
       formData.append('image', file);
       const { data } = await instance.post('/upload', formData);
-      setImg(`http://localhost:4444${data.url}`);
+      setImg(`${process.env.REACT_APP_URL}${data.url}`);
     } catch (err) {
       console.warn(err);
       setImg(
