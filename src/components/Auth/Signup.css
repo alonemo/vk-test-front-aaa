@@ -1,0 +1,62 @@
+.auth {
+  grid-column: 2;
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  margin: 1rem 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.auth form > div {
+  margin: 2rem 0;
+}
+
+.auth .photo-upload {
+  display: inline-block;
+}
+
+.age-input {
+  text-align: left;
+}
+
+.auth .login {
+  margin: 1rem 0;
+  font-size: 0.8rem;
+}
+
+.auth form > div > div {
+  background: var(--color-light);
+  border-radius: var(--border-radius);
+  padding: var(--search-padding);
+  width: 50%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.auth input[type='text'],
+.auth input[type='password'],
+.auth input[type='number'] {
+  background: transparent;
+  font-size: 1.2rem;
+  color: var(--color-dark);
+}
+
+.auth input[type='text']::placeholder,
+.auth input[type='password']::placeholder,
+.auth input[type='number']::placeholder {
+  color: var(--color-gray);
+}
+
+.auth .btn {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.auth .profile-photo {
+  width: 10rem;
+}

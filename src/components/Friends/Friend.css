@@ -1,0 +1,63 @@
+.user-item {
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.user-item .profile-photo {
+  width: 7.2rem;
+}
+
+.user-item .detailed-info {
+  margin: 0.7rem 0;
+  margin-left: 0;
+  border-top: 1px solid var(--color-light);
+  padding-left: 0;
+  font-size: 0.8rem;
+}
+
+.user-item .detailed-info i {
+  font-size: 0.8rem;
+  color: var(--color-gray);
+  position: relative;
+  margin-left: 0;
+}
+
+.user-item .detailed-info p {
+  margin-left: 0.5rem;
+}
+
+.user-item .detailed-info div {
+  display: flex;
+  align-items: center;
+  transition: all 300ms ease;
+  position: relative;
+}
+
+.user-item .user {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+
+.user-item .action-buttons {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.4rem;
+  margin-left: 3rem;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.user-item .action-buttons .delete-friend:hover {
+  color: red;
+}
+
+.user-item .action-buttons .add-friend:hover {
+  color: green;
+}

@@ -1,0 +1,41 @@
+.feed {
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.feed .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed .user {
+  display: flex;
+  gap: 1rem;
+}
+
+.feed .photo {
+  overflow: hidden;
+  margin: 0.7rem 0;
+  aspect-ratio: 1/1;
+}
+
+.feed .photo img {
+  border-radius: 5%;
+}
+
+.feed .caption {
+  margin: 0.7rem 0;
+  margin-left: 0.5rem;
+}
+
+.feed .action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  margin: 0.6rem;
+}

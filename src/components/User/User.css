@@ -1,0 +1,63 @@
+.user-profile {
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  /* margin: 1rem 0; */
+  font-size: 0.85rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.user-profile .profile-photo {
+  width: 10rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.user-profile .info {
+  margin: 1rem 0;
+}
+
+.user-profile .detailed-info {
+  border-top: 1px solid black;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.user-profile .detailed-info > div {
+  display: inline-block;
+  transition: all 300ms ease;
+  position: relative;
+}
+
+.user-profile .detailed-info i {
+  display: inline-block;
+  font-size: 1.4rem;
+  color: var(--color-gray);
+  margin-left: 1rem;
+  position: relative;
+}
+
+.user-profile .detailed-info h3 {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.user-profile .interaction-buttons p {
+  display: inline-block;
+}
+
+.user-profile .interaction-buttons .add-friend,
+.user-profile .interaction-buttons .delete-friend {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.user-profile .interaction-buttons .btn {
+  margin: 1rem 0;
+}

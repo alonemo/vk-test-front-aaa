@@ -1,0 +1,54 @@
+.auth {
+  grid-column: 2;
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  margin: 1rem 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.auth .signup {
+  margin: 1rem 0;
+  font-size: 0.8rem;
+}
+
+.auth .email,
+.auth .password {
+  margin: 2rem 0;
+}
+
+.error {
+  color: red;
+}
+
+.auth .email-input,
+.auth .password-input {
+  background: var(--color-light);
+  border-radius: var(--border-radius);
+  padding: var(--search-padding);
+  width: 50%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.invalid-input {
+  border: 1px solid red;
+}
+
+.auth input[type='text'],
+.auth input[type='password'] {
+  background: transparent;
+  font-size: 1.2rem;
+  color: var(--color-dark);
+}
+
+.auth input[type='text']::placeholder,
+.auth input[type='password']::placeholder {
+  color: var(--color-gray);
+}
+
+.auth .btn {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}

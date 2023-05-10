@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import RootLayout from './pages/Root/Root';
+import ErrorPage from './pages/Error/Error';
+import PostsPage from './pages/Posts/Posts';
+import UserPage from './pages/User/User';
+import FriendsPage from './pages/Friends/Friends';
+import LoginPage from './pages/Login/Login';
+import SignupPage from './pages/Signup/Signup';
+import AllUsersPage from './pages/AllUsers/AllUsers';
+import { loader as logoutAction } from './pages/Logout/Logout';
+import { checkAuthLoader } from './utils/helper';
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: <LoginPage /> },
+      { path: 'signup', element: <SignupPage /> },
+      {
+        path: 'posts',
+        element: <PostsPage />,
+        loader: checkAuthLoader,
+      },
+      {
+        path: ':userId',
+        loader: checkAuthLoader,
+        children: [
+          {
+            index: true,
+            element: <UserPage />,
+            loader: checkAuthLoader,
+          },
+          {
+            path: 'friends',
+            element: <FriendsPage />,
+            loader: checkAuthLoader,
+          },
+          { path: 'users', element: <AllUsersPage />, loader: checkAuthLoader },
+        ],
+      },
+      {
+        path: 'logout',
+        loader: logoutAction,
+      },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
