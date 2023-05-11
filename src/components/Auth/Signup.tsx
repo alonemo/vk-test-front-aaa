@@ -3,6 +3,7 @@ import './Signup.css';
 import instance, { signup } from '../../utils/axios';
 import { useState } from 'react';
 import { ISignupData } from '../../types/interfaces';
+import { getTokenHelper, getUserIdHelper } from '../../utils/helper';
 
 const Signup = () => {
   const [img, setImg] = useState(
@@ -10,6 +11,12 @@ const Signup = () => {
   );
 
   const navigate = useNavigate();
+
+  const token = getTokenHelper();
+  const userId = getUserIdHelper();
+  if (token && userId) {
+    navigate(`/${userId}`);
+  }
 
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [isValidPassword, setIsValidPassword] = useState(true);
