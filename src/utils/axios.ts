@@ -14,6 +14,7 @@ const instance = axios.create({
 });
 
 export const login = async (logData: ILogData) => {
+  console.log(process.env.REACT_APP_API_URL);
   const response = await instance.post('/auth/login', logData);
   const data = await response.data;
   return data;
