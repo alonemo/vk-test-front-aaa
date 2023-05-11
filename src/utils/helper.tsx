@@ -53,4 +53,5 @@ export const isAuthLoader = () => {
   if (token && userId) {
     return redirect(`/${userId}`);
   }
+  return null;
 };

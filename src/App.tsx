@@ -9,15 +9,15 @@ import LoginPage from './pages/Login/Login';
 import SignupPage from './pages/Signup/Signup';
 import AllUsersPage from './pages/AllUsers/AllUsers';
 import { loader as logoutAction } from './pages/Logout/Logout';
-import { checkAuthLoader } from './utils/helper';
+import { checkAuthLoader, isAuthLoader } from './utils/helper';
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <LoginPage /> },
-      { path: 'signup', element: <SignupPage /> },
+      { index: true, element: <LoginPage />, loader: isAuthLoader },
+      { path: 'signup', element: <SignupPage />, loader: isAuthLoader },
       {
         path: 'posts',
         element: <PostsPage />,
