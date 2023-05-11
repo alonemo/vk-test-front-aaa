@@ -24,6 +24,7 @@ const Signup = () => {
   const [errMsg, setErrMsg] = useState('');
 
   const handleChangeFile = async (event: any) => {
+    console.log(process.env.REACT_APP_URL);
     try {
       const formData = new FormData();
       const file = event.target.files[0];
