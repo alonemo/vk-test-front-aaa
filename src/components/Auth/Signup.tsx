@@ -24,13 +24,12 @@ const Signup = () => {
   const [errMsg, setErrMsg] = useState('');
 
   const handleChangeFile = async (event: any) => {
-    console.log(process.env.REACT_APP_API_URL);
     try {
       const formData = new FormData();
       const file = event.target.files[0];
       formData.append('image', file);
       const { data } = await instance.post('/upload', formData);
-      setImg(`${process.env.REACT_APP_URL}${data.url}`);
+      setImg(`${process.env.REACT_APP_API_URL}${data.url}`);
     } catch (err) {
       console.warn(err);
       setImg(

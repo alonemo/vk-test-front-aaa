@@ -8,9 +8,9 @@ import {
   IUsers,
 } from '../types/interfaces';
 import { getTokenHelper, getUserIdHelper } from './helper';
-console.log(process.env.REACT_APP_URL);
+
 const instance = axios.create({
-  baseURL: process.env.REACT_APP_URL,
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
 export const login = async (logData: ILogData) => {
