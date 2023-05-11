@@ -46,3 +46,11 @@ export const checkAuthLoader = () => {
   }
   return null;
 };
+
+export const isAuthLoader = () => {
+  const token = getTokenHelper();
+  const userId = getUserIdHelper();
+  if (token && userId) {
+    return redirect(`/${userId}`);
+  }
+};

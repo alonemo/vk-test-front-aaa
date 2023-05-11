@@ -12,12 +12,6 @@ const Signup = () => {
 
   const navigate = useNavigate();
 
-  const token = getTokenHelper();
-  const userId = getUserIdHelper();
-  if (token && userId) {
-    navigate(`/${userId}`);
-  }
-
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [isValidPassword, setIsValidPassword] = useState(true);
   const [isValidFirst, setIsValidFirst] = useState(true);

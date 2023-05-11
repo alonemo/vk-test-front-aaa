@@ -1,17 +1,11 @@
-import { NavLink, redirect, json, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './Login.css';
 import { login } from '../../utils/axios';
 import { ILogData } from '../../types/interfaces';
 import { useState } from 'react';
-import { getTokenHelper, getUserIdHelper } from '../../utils/helper';
 const Login = () => {
   const navigate = useNavigate();
 
-  const token = getTokenHelper();
-  const userId = getUserIdHelper();
-  if (token && userId) {
-    navigate(`/${userId}`);
-  }
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [isValidPassword, setIsValidPassword] = useState(true);
   const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
